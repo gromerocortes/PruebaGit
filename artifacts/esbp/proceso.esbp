@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xq:process xmlns:wsis="http://www.sonicsw.com/esb/service/invocation" xmlns:xq="http://www.sonicsw.com/sonicxq" name="proceso" processModelVersion="3.0" qualityOfService="BEST_EFFORT" timeToLive="0">
+<xq:process xmlns:wsis="http://www.sonicsw.com/esb/service/invocation" xmlns:xq="http://www.sonicsw.com/sonicxq" name="proceso" processModelVersion="3.0" description="." qualityOfService="BEST_EFFORT" timeToLive="0" entry_ref="proceso.entry">
   <xq:exitEndpoint_list>
-    <xq:exitEndpoint endpoint_ref="REPLY_TO" type="REPLY_TO"/>
+    <xq:exitEndpoint endpoint_ref="proceso.Exit" type="ENDPOINT"/>
   </xq:exitEndpoint_list>
-  <xq:faultEndpoint endpoint_ref="REPLY_TO" type="REPLY_TO"/>
-  <xq:rejectEndpoint endpoint_ref="dev.RME" type="ENDPOINT"/>
+  <xq:faultEndpoint endpoint_ref="proceso.Fault" type="ENDPOINT"/>
+  <xq:rejectEndpoint endpoint_ref="proceso.RME" type="ENDPOINT"/>
   <xq:itinerary>
-    <xq:step name="Service 1" type="SERVICE" endpoint_ref="dev.Prototype">
+    <xq:step name="Service 1" type="SERVICE" endpoint_ref="prototype">
       <xq:params>
         <xq:stringParam name="mergeMessage">false</xq:stringParam>
         <xq:stringParam name="delay">0</xq:stringParam>
