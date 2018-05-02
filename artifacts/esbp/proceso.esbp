@@ -12,7 +12,7 @@
         <xq:stringParam name="delay">0</xq:stringParam>
       </xq:params>
     </xq:step>
-    <xq:step name="Service 2" type="SERVICE" endpoint_ref="dev.Prototype">
+    <xq:step name="Service 2" type="SERVICE" endpoint_ref="prototype">
       <xq:params>
         <xq:stringParam name="mergeMessage">false</xq:stringParam>
         <xq:stringParam name="delay">0</xq:stringParam>
